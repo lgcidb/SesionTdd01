@@ -8,7 +8,6 @@ public class CalculadoraTest {
 	
 	@Test
 	public void SumarDosMasTresEsCinco(){
-		
 		/*Arrange*/
 		Calculadora calculadora = new Calculadora();
 		
@@ -17,6 +16,17 @@ public class CalculadoraTest {
 		
 		/*Assert*/
 		assertThat(result,is(5));
+	}
+	
+	@Test
+	public void sumarMenosUnoYSieteEsSeis(){
+		/*Arrange*/
+		Calculadora calculadora = new Calculadora();
 		
+		/*Act*/
+		int result = calculadora.sumar(-1, 7);
+		
+		/*Assert*/
+		assertThat(result,is(6));
 	}
 }
